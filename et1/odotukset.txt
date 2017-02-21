@@ -1,0 +1,12 @@
+Jussi Jokio 24339750
+
+Ilmoittautuessani olio-ohjelmoinnin jatkokurssille, ei mielessäni
+ollut juuri sen suurempia odotuksia kuin olio-ohjelmoinnin 
+kurssillekkaan ilmoittautuessani. Kuitenkin olen todella halukas
+oppimaan mahdollisimman paljon kurssin aikana. 
+
+Nyt kun olen paremmin selvillä kurssin tavoitteista ja suoritustavoista, 
+on myös odotukseni kasvaneet. Kurssilla haluaisin oppia varsinkin 
+C++:n syntaksin ja erityispiirteet,Git-versionhallinnan sujuvan käytön 
+projektien aikana ja lisää itse olioiden ja luokkien käytöstä 
+ohjelmoinnissa.

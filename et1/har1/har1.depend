@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1484227009 source:/home/so/jujokio/Documents/har1/main.cpp
+	<iostream>
+	"matrix.h"
+
+1484227009 source:/home/so/jujokio/Documents/har1/matrix.cpp
+	<iostream>
+	"matrix.h"
+
+1484227009 /home/so/jujokio/Documents/har1/matrix.h
+

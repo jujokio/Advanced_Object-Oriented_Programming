@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1485262998 source:/home/so/jujokio/Documents/et3/HelloGreeter.cpp
+	<string>
+	<iostream>
+	"helloGreeter.h"
+
+1485263651 source:/home/so/jujokio/Documents/et3/Main.cpp
+	<vector>
+	<iostream>
+	<algorithm>
+	"HelloGreeter.h"
+
+1485262998 /home/so/jujokio/Documents/et3/HelloGreeter.h
+
+1485262998 source:/home/so/jujokio/Documents/ooj-2017-022/et3/HelloGreeter.cpp
+	<string>
+	<iostream>
+	"helloGreeter.h"
+
+1485272950 source:/home/so/jujokio/Documents/ooj-2017-022/et3/Main.cpp
+	<vector>
+	<iostream>
+	<algorithm>
+	"HelloGreeter.h"
+
+1485272669 /home/so/jujokio/Documents/ooj-2017-022/et3/HelloGreeter.h
+

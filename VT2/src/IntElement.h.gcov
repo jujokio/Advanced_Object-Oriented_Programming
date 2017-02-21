@@ -1,0 +1,31 @@
+        -:    0:Source:IntElement.h
+        -:    0:Programs:2
+        -:    1:#ifndef INTELEMENT_H
+        -:    2:#define INTELEMENT_H
+        -:    3:#include <iostream>
+        -:    4:
+    #####:    5:class IntElement
+        -:    6:{
+        -:    7:    public:
+        -:    8:        IntElement();
+        -:    9:        IntElement(int v);
+    #####:   10:        virtual ~IntElement()=default;
+        -:   11:        int getVal()const;
+        -:   12:        void setVal(int v);
+        -:   13:
+        -:   14:        IntElement& operator+=(const IntElement& i);
+        -:   15:        IntElement& operator-=(const IntElement& i);
+        -:   16:        IntElement& operator*=(const IntElement& i);
+        -:   17:
+        -:   18:        std::ostream& operator<<(std::ostream& os);
+        -:   19:
+        -:   20:
+        -:   21:    private:
+        -:   22:        int val;
+        -:   23:};
+        -:   24:IntElement operator+(const IntElement &i1, const IntElement &i2);
+        -:   25:IntElement operator-(const IntElement &i1, const IntElement &i2);
+        -:   26:IntElement operator*(const IntElement &i1, const IntElement &i2);
+        -:   27:
+        -:   28:
+        -:   29:#endif // INTELEMENT_H

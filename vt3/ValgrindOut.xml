@@ -1,0 +1,3333 @@
+<?xml version="1.0"?>
+
+<valgrindoutput>
+
+<protocolversion>4</protocolversion>
+<protocoltool>memcheck</protocoltool>
+
+<preamble>
+  <line>Memcheck, a memory error detector</line>
+  <line>Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.</line>
+  <line>Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info</line>
+  <line>Command: /home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3 </line>
+</preamble>
+
+<pid>12257</pid>
+<ppid>44521</ppid>
+<tool>memcheck</tool>
+
+<args>
+  <vargv>
+    <exe>/usr/bin/valgrind</exe>
+    <arg>--leak-check=full</arg>
+    <arg>--track-origins=yes</arg>
+    <arg>--xml=yes</arg>
+    <arg>--xml-file=/home/jujokio/Documents/ooj-2017-022/vt3/ValgrindOut.xml</arg>
+  </vargv>
+  <argv>
+    <exe>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</exe>
+    <arg></arg>
+  </argv>
+</args>
+
+<status>
+  <state>RUNNING</state>
+  <time>00:00:00:00.082 </time>
+</status>
+
+<error>
+  <unique>0x0</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 4</what>
+  <stack>
+    <frame>
+      <ip>0x42CD16</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>IntElement::operator=(IntElement const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>IntElement.h</file>
+      <line>13</line>
+    </frame>
+    <frame>
+      <ip>0x42CD50</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::operator=(SquareMatrix const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x40E53B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+    <frame>
+      <ip>0x41F44B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runCurrentTest(std::string&amp;, std::string&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6182</line>
+    </frame>
+    <frame>
+      <ip>0x41DE12</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runTest(Catch::TestCase const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6002</line>
+    </frame>
+    <frame>
+      <ip>0x40558C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::runTests(Catch::Ptr&lt;Catch::Config&gt; const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6350</line>
+    </frame>
+    <frame>
+      <ip>0x420028</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::Session::run()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6458</line>
+    </frame>
+    <frame>
+      <ip>0x41FF29</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::Session::run(int, char const* const*)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6437</line>
+    </frame>
+    <frame>
+      <ip>0x40D825</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>main</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>10393</line>
+    </frame>
+  </stack>
+  <auxwhat>Address 0xffeffef40 is on thread 1's stack</auxwhat>
+  <auxwhat>224 bytes below stack pointer</auxwhat>
+</error>
+
+<error>
+  <unique>0x1</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 4</what>
+  <stack>
+    <frame>
+      <ip>0x42CD16</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>IntElement::operator=(IntElement const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>IntElement.h</file>
+      <line>13</line>
+    </frame>
+    <frame>
+      <ip>0x42CD6B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::operator=(SquareMatrix const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x40E53B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+    <frame>
+      <ip>0x41F44B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runCurrentTest(std::string&amp;, std::string&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6182</line>
+    </frame>
+    <frame>
+      <ip>0x41DE12</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runTest(Catch::TestCase const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6002</line>
+    </frame>
+    <frame>
+      <ip>0x40558C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::runTests(Catch::Ptr&lt;Catch::Config&gt; const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6350</line>
+    </frame>
+    <frame>
+      <ip>0x420028</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::Session::run()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6458</line>
+    </frame>
+    <frame>
+      <ip>0x41FF29</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::Session::run(int, char const* const*)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6437</line>
+    </frame>
+    <frame>
+      <ip>0x40D825</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>main</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>10393</line>
+    </frame>
+  </stack>
+  <auxwhat>Address 0xffeffef50 is on thread 1's stack</auxwhat>
+  <auxwhat>208 bytes below stack pointer</auxwhat>
+</error>
+
+<error>
+  <unique>0x2</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 4</what>
+  <stack>
+    <frame>
+      <ip>0x42CD16</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>IntElement::operator=(IntElement const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>IntElement.h</file>
+      <line>13</line>
+    </frame>
+    <frame>
+      <ip>0x42CD86</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::operator=(SquareMatrix const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x40E53B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+    <frame>
+      <ip>0x41F44B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runCurrentTest(std::string&amp;, std::string&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6182</line>
+    </frame>
+    <frame>
+      <ip>0x41DE12</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runTest(Catch::TestCase const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6002</line>
+    </frame>
+    <frame>
+      <ip>0x40558C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::runTests(Catch::Ptr&lt;Catch::Config&gt; const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6350</line>
+    </frame>
+    <frame>
+      <ip>0x420028</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::Session::run()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6458</line>
+    </frame>
+    <frame>
+      <ip>0x41FF29</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::Session::run(int, char const* const*)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6437</line>
+    </frame>
+    <frame>
+      <ip>0x40D825</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>main</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>10393</line>
+    </frame>
+  </stack>
+  <auxwhat>Address 0xffeffef60 is on thread 1's stack</auxwhat>
+  <auxwhat>192 bytes below stack pointer</auxwhat>
+</error>
+
+<error>
+  <unique>0x3</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 4</what>
+  <stack>
+    <frame>
+      <ip>0x42CD16</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>IntElement::operator=(IntElement const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>IntElement.h</file>
+      <line>13</line>
+    </frame>
+    <frame>
+      <ip>0x42CDA1</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::operator=(SquareMatrix const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x40E53B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+    <frame>
+      <ip>0x41F44B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runCurrentTest(std::string&amp;, std::string&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6182</line>
+    </frame>
+    <frame>
+      <ip>0x41DE12</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runTest(Catch::TestCase const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6002</line>
+    </frame>
+    <frame>
+      <ip>0x40558C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::runTests(Catch::Ptr&lt;Catch::Config&gt; const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6350</line>
+    </frame>
+    <frame>
+      <ip>0x420028</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::Session::run()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6458</line>
+    </frame>
+    <frame>
+      <ip>0x41FF29</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::Session::run(int, char const* const*)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6437</line>
+    </frame>
+    <frame>
+      <ip>0x40D825</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>main</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>10393</line>
+    </frame>
+  </stack>
+  <auxwhat>Address 0xffeffef70 is on thread 1's stack</auxwhat>
+  <auxwhat>176 bytes below stack pointer</auxwhat>
+</error>
+
+<error>
+  <unique>0x4</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 4</what>
+  <stack>
+    <frame>
+      <ip>0x42CDA6</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::operator=(SquareMatrix const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x40E53B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+    <frame>
+      <ip>0x41F44B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runCurrentTest(std::string&amp;, std::string&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6182</line>
+    </frame>
+    <frame>
+      <ip>0x41DE12</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runTest(Catch::TestCase const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6002</line>
+    </frame>
+    <frame>
+      <ip>0x40558C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::runTests(Catch::Ptr&lt;Catch::Config&gt; const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6350</line>
+    </frame>
+    <frame>
+      <ip>0x420028</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::Session::run()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6458</line>
+    </frame>
+    <frame>
+      <ip>0x41FF29</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::Session::run(int, char const* const*)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6437</line>
+    </frame>
+    <frame>
+      <ip>0x40D825</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>main</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>10393</line>
+    </frame>
+  </stack>
+  <auxwhat>Address 0xffeffef78 is on thread 1's stack</auxwhat>
+  <auxwhat>184 bytes below stack pointer</auxwhat>
+</error>
+
+<error>
+  <unique>0x5</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x435B12</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::operator=(std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>185</line>
+    </frame>
+    <frame>
+      <ip>0x42CDCA</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::operator=(SquareMatrix const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x40E53B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+    <frame>
+      <ip>0x41F44B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runCurrentTest(std::string&amp;, std::string&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6182</line>
+    </frame>
+    <frame>
+      <ip>0x41DE12</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runTest(Catch::TestCase const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6002</line>
+    </frame>
+    <frame>
+      <ip>0x40558C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::runTests(Catch::Ptr&lt;Catch::Config&gt; const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6350</line>
+    </frame>
+    <frame>
+      <ip>0x420028</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::Session::run()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6458</line>
+    </frame>
+    <frame>
+      <ip>0x41FF29</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::Session::run(int, char const* const*)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6437</line>
+    </frame>
+    <frame>
+      <ip>0x40D825</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>main</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>10393</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x436192</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::size() const</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>645</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x6</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x435C05</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::operator=(std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>197</line>
+    </frame>
+    <frame>
+      <ip>0x42CDCA</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::operator=(SquareMatrix const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x40E53B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+    <frame>
+      <ip>0x41F44B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runCurrentTest(std::string&amp;, std::string&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6182</line>
+    </frame>
+    <frame>
+      <ip>0x41DE12</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runTest(Catch::TestCase const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6002</line>
+    </frame>
+    <frame>
+      <ip>0x40558C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::runTests(Catch::Ptr&lt;Catch::Config&gt; const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6350</line>
+    </frame>
+    <frame>
+      <ip>0x420028</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::Session::run()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6458</line>
+    </frame>
+    <frame>
+      <ip>0x41FF29</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::Session::run(int, char const* const*)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6437</line>
+    </frame>
+    <frame>
+      <ip>0x40D825</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>main</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>10393</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x436192</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::size() const</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>645</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x7</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x452CE0</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move&lt;false, false, std::random_access_iterator_tag&gt;::__copy_m&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>333</line>
+    </frame>
+    <frame>
+      <ip>0x44FAB2</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move_a&lt;false, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>390</line>
+    </frame>
+    <frame>
+      <ip>0x449D96</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::__copy_move_a2&lt;false, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>428</line>
+    </frame>
+    <frame>
+      <ip>0x44059D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::copy&lt;__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>460</line>
+    </frame>
+    <frame>
+      <ip>0x435C5C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::operator=(std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>200</line>
+    </frame>
+    <frame>
+      <ip>0x42CDCA</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::operator=(SquareMatrix const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x40E53B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+    <frame>
+      <ip>0x41F44B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runCurrentTest(std::string&amp;, std::string&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6182</line>
+    </frame>
+    <frame>
+      <ip>0x41DE12</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runTest(Catch::TestCase const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6002</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x43624A</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::end() const</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>565</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x8</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x435E9B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::operator=(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>163</line>
+    </frame>
+    <frame>
+      <ip>0x452CCB</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move&lt;false, false, std::random_access_iterator_tag&gt;::__copy_m&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>335</line>
+    </frame>
+    <frame>
+      <ip>0x44FAB2</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move_a&lt;false, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>390</line>
+    </frame>
+    <frame>
+      <ip>0x449D96</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::__copy_move_a2&lt;false, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>428</line>
+    </frame>
+    <frame>
+      <ip>0x44059D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::copy&lt;__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>460</line>
+    </frame>
+    <frame>
+      <ip>0x435C5C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::operator=(std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>200</line>
+    </frame>
+    <frame>
+      <ip>0x42CDCA</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::operator=(SquareMatrix const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x40E53B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+    <frame>
+      <ip>0x41F44B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runCurrentTest(std::string&amp;, std::string&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6182</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x43621A</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::begin() const</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>547</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x9</unique>
+  <tid>1</tid>
+  <kind>UninitValue</kind>
+  <what>Use of uninitialised value of size 8</what>
+  <stack>
+    <frame>
+      <ip>0x436200</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::size() const</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>646</line>
+    </frame>
+    <frame>
+      <ip>0x435F89</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::operator=(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>184</line>
+    </frame>
+    <frame>
+      <ip>0x452CCB</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move&lt;false, false, std::random_access_iterator_tag&gt;::__copy_m&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>335</line>
+    </frame>
+    <frame>
+      <ip>0x44FAB2</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move_a&lt;false, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>390</line>
+    </frame>
+    <frame>
+      <ip>0x449D96</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::__copy_move_a2&lt;false, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>428</line>
+    </frame>
+    <frame>
+      <ip>0x44059D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::copy&lt;__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>460</line>
+    </frame>
+    <frame>
+      <ip>0x435C5C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::operator=(std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>200</line>
+    </frame>
+    <frame>
+      <ip>0x42CDCA</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::operator=(SquareMatrix const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x40E53B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x43621A</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::begin() const</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>547</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0xa</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 8</what>
+  <stack>
+    <frame>
+      <ip>0x436200</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::size() const</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>646</line>
+    </frame>
+    <frame>
+      <ip>0x435F89</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::operator=(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>184</line>
+    </frame>
+    <frame>
+      <ip>0x452CCB</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move&lt;false, false, std::random_access_iterator_tag&gt;::__copy_m&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>335</line>
+    </frame>
+    <frame>
+      <ip>0x44FAB2</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move_a&lt;false, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>390</line>
+    </frame>
+    <frame>
+      <ip>0x449D96</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::__copy_move_a2&lt;false, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>428</line>
+    </frame>
+    <frame>
+      <ip>0x44059D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::copy&lt;__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>460</line>
+    </frame>
+    <frame>
+      <ip>0x435C5C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::operator=(std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>200</line>
+    </frame>
+    <frame>
+      <ip>0x42CDCA</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::operator=(SquareMatrix const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x40E53B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x5a22d48 is 8 bytes inside a block of size 48 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2918D</ip>
+      <obj>/usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+      <dir>/builddir/build/BUILD/valgrind-3.11.0/coregrind/m_replacemalloc</dir>
+      <file>vg_replace_malloc.c</file>
+      <line>576</line>
+    </frame>
+    <frame>
+      <ip>0x449D1D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::new_allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;::deallocate(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, unsigned long)</fn>
+      <dir>/usr/include/c++/4.8.2/ext</dir>
+      <file>new_allocator.h</file>
+      <line>110</line>
+    </frame>
+    <frame>
+      <ip>0x440465</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::_Vector_base&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::_M_deallocate(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, unsigned long)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>174</line>
+    </frame>
+    <frame>
+      <ip>0x44010D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::_Vector_base&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::~_Vector_base()</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>160</line>
+    </frame>
+    <frame>
+      <ip>0x4358AE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::~vector()</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>416</line>
+    </frame>
+    <frame>
+      <ip>0x457D9C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::~SquareMatrix()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>24</line>
+    </frame>
+    <frame>
+      <ip>0x40F75F</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::Transpose() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>186</line>
+    </frame>
+    <frame>
+      <ip>0x40E526</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+    <frame>
+      <ip>0x41F44B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runCurrentTest(std::string&amp;, std::string&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6182</line>
+    </frame>
+  </stack>
+  <auxwhat>Block was alloc'd at</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C28203</ip>
+      <obj>/usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator new(unsigned long)</fn>
+      <dir>/builddir/build/BUILD/valgrind-3.11.0/coregrind/m_replacemalloc</dir>
+      <file>vg_replace_malloc.c</file>
+      <line>334</line>
+    </frame>
+    <frame>
+      <ip>0x44F8BA</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::new_allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;::allocate(unsigned long, void const*)</fn>
+      <dir>/usr/include/c++/4.8.2/ext</dir>
+      <file>new_allocator.h</file>
+      <line>104</line>
+    </frame>
+    <frame>
+      <ip>0x449B58</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::_Vector_base&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::_M_allocate(unsigned long)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>168</line>
+    </frame>
+    <frame>
+      <ip>0x440ABF</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>void std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::_M_emplace_back_aux&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>404</line>
+    </frame>
+    <frame>
+      <ip>0x43644C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::push_back(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>911</line>
+    </frame>
+    <frame>
+      <ip>0x40F2BE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::pushVector(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>156</line>
+    </frame>
+    <frame>
+      <ip>0x40F706</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::Transpose() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>184</line>
+    </frame>
+    <frame>
+      <ip>0x40E526</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+    <frame>
+      <ip>0x41F44B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runCurrentTest(std::string&amp;, std::string&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6182</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0xb</unique>
+  <tid>1</tid>
+  <kind>UninitValue</kind>
+  <what>Use of uninitialised value of size 8</what>
+  <stack>
+    <frame>
+      <ip>0x43620B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::size() const</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>646</line>
+    </frame>
+    <frame>
+      <ip>0x435F89</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::operator=(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>184</line>
+    </frame>
+    <frame>
+      <ip>0x452CCB</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move&lt;false, false, std::random_access_iterator_tag&gt;::__copy_m&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>335</line>
+    </frame>
+    <frame>
+      <ip>0x44FAB2</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move_a&lt;false, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>390</line>
+    </frame>
+    <frame>
+      <ip>0x449D96</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::__copy_move_a2&lt;false, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>428</line>
+    </frame>
+    <frame>
+      <ip>0x44059D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::copy&lt;__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>460</line>
+    </frame>
+    <frame>
+      <ip>0x435C5C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::operator=(std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>200</line>
+    </frame>
+    <frame>
+      <ip>0x42CDCA</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::operator=(SquareMatrix const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x40E53B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x43621A</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::begin() const</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>547</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0xc</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 8</what>
+  <stack>
+    <frame>
+      <ip>0x43620B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::size() const</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>646</line>
+    </frame>
+    <frame>
+      <ip>0x435F89</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::operator=(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>184</line>
+    </frame>
+    <frame>
+      <ip>0x452CCB</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move&lt;false, false, std::random_access_iterator_tag&gt;::__copy_m&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>335</line>
+    </frame>
+    <frame>
+      <ip>0x44FAB2</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move_a&lt;false, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>390</line>
+    </frame>
+    <frame>
+      <ip>0x449D96</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::__copy_move_a2&lt;false, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>428</line>
+    </frame>
+    <frame>
+      <ip>0x44059D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::copy&lt;__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>460</line>
+    </frame>
+    <frame>
+      <ip>0x435C5C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::operator=(std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>200</line>
+    </frame>
+    <frame>
+      <ip>0x42CDCA</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::operator=(SquareMatrix const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x40E53B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x5a22d40 is 0 bytes inside a block of size 48 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2918D</ip>
+      <obj>/usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+      <dir>/builddir/build/BUILD/valgrind-3.11.0/coregrind/m_replacemalloc</dir>
+      <file>vg_replace_malloc.c</file>
+      <line>576</line>
+    </frame>
+    <frame>
+      <ip>0x449D1D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::new_allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;::deallocate(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, unsigned long)</fn>
+      <dir>/usr/include/c++/4.8.2/ext</dir>
+      <file>new_allocator.h</file>
+      <line>110</line>
+    </frame>
+    <frame>
+      <ip>0x440465</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::_Vector_base&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::_M_deallocate(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, unsigned long)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>174</line>
+    </frame>
+    <frame>
+      <ip>0x44010D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::_Vector_base&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::~_Vector_base()</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>160</line>
+    </frame>
+    <frame>
+      <ip>0x4358AE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::~vector()</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>416</line>
+    </frame>
+    <frame>
+      <ip>0x457D9C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::~SquareMatrix()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>24</line>
+    </frame>
+    <frame>
+      <ip>0x40F75F</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::Transpose() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>186</line>
+    </frame>
+    <frame>
+      <ip>0x40E526</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+    <frame>
+      <ip>0x41F44B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runCurrentTest(std::string&amp;, std::string&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6182</line>
+    </frame>
+  </stack>
+  <auxwhat>Block was alloc'd at</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C28203</ip>
+      <obj>/usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator new(unsigned long)</fn>
+      <dir>/builddir/build/BUILD/valgrind-3.11.0/coregrind/m_replacemalloc</dir>
+      <file>vg_replace_malloc.c</file>
+      <line>334</line>
+    </frame>
+    <frame>
+      <ip>0x44F8BA</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::new_allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;::allocate(unsigned long, void const*)</fn>
+      <dir>/usr/include/c++/4.8.2/ext</dir>
+      <file>new_allocator.h</file>
+      <line>104</line>
+    </frame>
+    <frame>
+      <ip>0x449B58</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::_Vector_base&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::_M_allocate(unsigned long)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>168</line>
+    </frame>
+    <frame>
+      <ip>0x440ABF</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>void std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::_M_emplace_back_aux&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>404</line>
+    </frame>
+    <frame>
+      <ip>0x43644C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::push_back(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>911</line>
+    </frame>
+    <frame>
+      <ip>0x40F2BE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::pushVector(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>156</line>
+    </frame>
+    <frame>
+      <ip>0x40F706</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::Transpose() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>184</line>
+    </frame>
+    <frame>
+      <ip>0x40E526</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+    <frame>
+      <ip>0x41F44B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runCurrentTest(std::string&amp;, std::string&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6182</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0xd</unique>
+  <tid>1</tid>
+  <kind>UninitValue</kind>
+  <what>Use of uninitialised value of size 8</what>
+  <stack>
+    <frame>
+      <ip>0x440826</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::end() const</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>566</line>
+    </frame>
+    <frame>
+      <ip>0x435FB4</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::operator=(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>188</line>
+    </frame>
+    <frame>
+      <ip>0x452CCB</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move&lt;false, false, std::random_access_iterator_tag&gt;::__copy_m&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>335</line>
+    </frame>
+    <frame>
+      <ip>0x44FAB2</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move_a&lt;false, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>390</line>
+    </frame>
+    <frame>
+      <ip>0x449D96</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::__copy_move_a2&lt;false, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>428</line>
+    </frame>
+    <frame>
+      <ip>0x44059D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::copy&lt;__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>460</line>
+    </frame>
+    <frame>
+      <ip>0x435C5C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::operator=(std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>200</line>
+    </frame>
+    <frame>
+      <ip>0x42CDCA</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::operator=(SquareMatrix const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x40E53B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x43621A</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::begin() const</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>547</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0xe</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 8</what>
+  <stack>
+    <frame>
+      <ip>0x440826</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::end() const</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>566</line>
+    </frame>
+    <frame>
+      <ip>0x435FB4</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::operator=(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>188</line>
+    </frame>
+    <frame>
+      <ip>0x452CCB</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move&lt;false, false, std::random_access_iterator_tag&gt;::__copy_m&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>335</line>
+    </frame>
+    <frame>
+      <ip>0x44FAB2</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move_a&lt;false, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>390</line>
+    </frame>
+    <frame>
+      <ip>0x449D96</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::__copy_move_a2&lt;false, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>428</line>
+    </frame>
+    <frame>
+      <ip>0x44059D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::copy&lt;__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>460</line>
+    </frame>
+    <frame>
+      <ip>0x435C5C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::operator=(std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>200</line>
+    </frame>
+    <frame>
+      <ip>0x42CDCA</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::operator=(SquareMatrix const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x40E53B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x5a22d48 is 8 bytes inside a block of size 48 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2918D</ip>
+      <obj>/usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+      <dir>/builddir/build/BUILD/valgrind-3.11.0/coregrind/m_replacemalloc</dir>
+      <file>vg_replace_malloc.c</file>
+      <line>576</line>
+    </frame>
+    <frame>
+      <ip>0x449D1D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::new_allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;::deallocate(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, unsigned long)</fn>
+      <dir>/usr/include/c++/4.8.2/ext</dir>
+      <file>new_allocator.h</file>
+      <line>110</line>
+    </frame>
+    <frame>
+      <ip>0x440465</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::_Vector_base&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::_M_deallocate(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, unsigned long)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>174</line>
+    </frame>
+    <frame>
+      <ip>0x44010D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::_Vector_base&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::~_Vector_base()</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>160</line>
+    </frame>
+    <frame>
+      <ip>0x4358AE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::~vector()</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>416</line>
+    </frame>
+    <frame>
+      <ip>0x457D9C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::~SquareMatrix()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>24</line>
+    </frame>
+    <frame>
+      <ip>0x40F75F</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::Transpose() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>186</line>
+    </frame>
+    <frame>
+      <ip>0x40E526</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+    <frame>
+      <ip>0x41F44B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runCurrentTest(std::string&amp;, std::string&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6182</line>
+    </frame>
+  </stack>
+  <auxwhat>Block was alloc'd at</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C28203</ip>
+      <obj>/usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator new(unsigned long)</fn>
+      <dir>/builddir/build/BUILD/valgrind-3.11.0/coregrind/m_replacemalloc</dir>
+      <file>vg_replace_malloc.c</file>
+      <line>334</line>
+    </frame>
+    <frame>
+      <ip>0x44F8BA</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::new_allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;::allocate(unsigned long, void const*)</fn>
+      <dir>/usr/include/c++/4.8.2/ext</dir>
+      <file>new_allocator.h</file>
+      <line>104</line>
+    </frame>
+    <frame>
+      <ip>0x449B58</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::_Vector_base&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::_M_allocate(unsigned long)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>168</line>
+    </frame>
+    <frame>
+      <ip>0x440ABF</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>void std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::_M_emplace_back_aux&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>404</line>
+    </frame>
+    <frame>
+      <ip>0x43644C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::push_back(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>911</line>
+    </frame>
+    <frame>
+      <ip>0x40F2BE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::pushVector(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>156</line>
+    </frame>
+    <frame>
+      <ip>0x40F706</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::Transpose() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>184</line>
+    </frame>
+    <frame>
+      <ip>0x40E526</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+    <frame>
+      <ip>0x41F44B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runCurrentTest(std::string&amp;, std::string&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6182</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0xf</unique>
+  <tid>1</tid>
+  <kind>UninitValue</kind>
+  <what>Use of uninitialised value of size 8</what>
+  <stack>
+    <frame>
+      <ip>0x4366A6</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::begin() const</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>548</line>
+    </frame>
+    <frame>
+      <ip>0x435FC3</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::operator=(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>188</line>
+    </frame>
+    <frame>
+      <ip>0x452CCB</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move&lt;false, false, std::random_access_iterator_tag&gt;::__copy_m&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>335</line>
+    </frame>
+    <frame>
+      <ip>0x44FAB2</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move_a&lt;false, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>390</line>
+    </frame>
+    <frame>
+      <ip>0x449D96</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::__copy_move_a2&lt;false, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>428</line>
+    </frame>
+    <frame>
+      <ip>0x44059D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::copy&lt;__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>460</line>
+    </frame>
+    <frame>
+      <ip>0x435C5C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::operator=(std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>200</line>
+    </frame>
+    <frame>
+      <ip>0x42CDCA</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::operator=(SquareMatrix const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x40E53B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x43621A</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::begin() const</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>547</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x10</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 8</what>
+  <stack>
+    <frame>
+      <ip>0x4366A6</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::begin() const</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>548</line>
+    </frame>
+    <frame>
+      <ip>0x435FC3</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::operator=(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>188</line>
+    </frame>
+    <frame>
+      <ip>0x452CCB</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move&lt;false, false, std::random_access_iterator_tag&gt;::__copy_m&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>335</line>
+    </frame>
+    <frame>
+      <ip>0x44FAB2</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move_a&lt;false, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>390</line>
+    </frame>
+    <frame>
+      <ip>0x449D96</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::__copy_move_a2&lt;false, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>428</line>
+    </frame>
+    <frame>
+      <ip>0x44059D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::copy&lt;__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>460</line>
+    </frame>
+    <frame>
+      <ip>0x435C5C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::operator=(std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>200</line>
+    </frame>
+    <frame>
+      <ip>0x42CDCA</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::operator=(SquareMatrix const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x40E53B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x5a22d40 is 0 bytes inside a block of size 48 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2918D</ip>
+      <obj>/usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+      <dir>/builddir/build/BUILD/valgrind-3.11.0/coregrind/m_replacemalloc</dir>
+      <file>vg_replace_malloc.c</file>
+      <line>576</line>
+    </frame>
+    <frame>
+      <ip>0x449D1D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::new_allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;::deallocate(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, unsigned long)</fn>
+      <dir>/usr/include/c++/4.8.2/ext</dir>
+      <file>new_allocator.h</file>
+      <line>110</line>
+    </frame>
+    <frame>
+      <ip>0x440465</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::_Vector_base&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::_M_deallocate(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, unsigned long)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>174</line>
+    </frame>
+    <frame>
+      <ip>0x44010D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::_Vector_base&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::~_Vector_base()</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>160</line>
+    </frame>
+    <frame>
+      <ip>0x4358AE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::~vector()</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>416</line>
+    </frame>
+    <frame>
+      <ip>0x457D9C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::~SquareMatrix()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>24</line>
+    </frame>
+    <frame>
+      <ip>0x40F75F</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::Transpose() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>186</line>
+    </frame>
+    <frame>
+      <ip>0x40E526</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+    <frame>
+      <ip>0x41F44B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runCurrentTest(std::string&amp;, std::string&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6182</line>
+    </frame>
+  </stack>
+  <auxwhat>Block was alloc'd at</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C28203</ip>
+      <obj>/usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator new(unsigned long)</fn>
+      <dir>/builddir/build/BUILD/valgrind-3.11.0/coregrind/m_replacemalloc</dir>
+      <file>vg_replace_malloc.c</file>
+      <line>334</line>
+    </frame>
+    <frame>
+      <ip>0x44F8BA</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::new_allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;::allocate(unsigned long, void const*)</fn>
+      <dir>/usr/include/c++/4.8.2/ext</dir>
+      <file>new_allocator.h</file>
+      <line>104</line>
+    </frame>
+    <frame>
+      <ip>0x449B58</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::_Vector_base&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::_M_allocate(unsigned long)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>168</line>
+    </frame>
+    <frame>
+      <ip>0x440ABF</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>void std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::_M_emplace_back_aux&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>404</line>
+    </frame>
+    <frame>
+      <ip>0x43644C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::push_back(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>911</line>
+    </frame>
+    <frame>
+      <ip>0x40F2BE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::pushVector(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>156</line>
+    </frame>
+    <frame>
+      <ip>0x40F706</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::Transpose() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>184</line>
+    </frame>
+    <frame>
+      <ip>0x40E526</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+    <frame>
+      <ip>0x41F44B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runCurrentTest(std::string&amp;, std::string&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6182</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x11</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 4</what>
+  <stack>
+    <frame>
+      <ip>0x42CCF9</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>IntElement::IntElement(IntElement const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>IntElement.h</file>
+      <line>13</line>
+    </frame>
+    <frame>
+      <ip>0x4530AC</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>_ZSt10_ConstructI10IntElementIRKS0_EEvPT_DpOT0_</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_construct.h</file>
+      <line>75</line>
+    </frame>
+    <frame>
+      <ip>0x44FE26</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>IntElement* std::__uninitialized_copy&lt;false&gt;::__uninit_copy&lt;__gnu_cxx::__normal_iterator&lt;IntElement const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;, IntElement*&gt;(__gnu_cxx::__normal_iterator&lt;IntElement const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;IntElement const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;, IntElement*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_uninitialized.h</file>
+      <line>75</line>
+    </frame>
+    <frame>
+      <ip>0x44A1A3</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>IntElement* std::uninitialized_copy&lt;__gnu_cxx::__normal_iterator&lt;IntElement const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;, IntElement*&gt;(__gnu_cxx::__normal_iterator&lt;IntElement const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;IntElement const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;, IntElement*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_uninitialized.h</file>
+      <line>117</line>
+    </frame>
+    <frame>
+      <ip>0x440A47</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>IntElement* std::__uninitialized_copy_a&lt;__gnu_cxx::__normal_iterator&lt;IntElement const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;, IntElement*, IntElement&gt;(__gnu_cxx::__normal_iterator&lt;IntElement const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;IntElement const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;, IntElement*, std::allocator&lt;IntElement&gt;&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_uninitialized.h</file>
+      <line>258</line>
+    </frame>
+    <frame>
+      <ip>0x44089A</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>IntElement* std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::_M_allocate_and_copy&lt;__gnu_cxx::__normal_iterator&lt;IntElement const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;(unsigned long, __gnu_cxx::__normal_iterator&lt;IntElement const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;IntElement const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>1141</line>
+    </frame>
+    <frame>
+      <ip>0x435FD9</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::operator=(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>188</line>
+    </frame>
+    <frame>
+      <ip>0x452CCB</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move&lt;false, false, std::random_access_iterator_tag&gt;::__copy_m&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>335</line>
+    </frame>
+    <frame>
+      <ip>0x44FAB2</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;* std::__copy_move_a&lt;false, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>390</line>
+    </frame>
+    <frame>
+      <ip>0x449D96</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::__copy_move_a2&lt;false, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>428</line>
+    </frame>
+    <frame>
+      <ip>0x44059D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; std::copy&lt;__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; &gt;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_algobase.h</file>
+      <line>460</line>
+    </frame>
+    <frame>
+      <ip>0x435C5C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::operator=(std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>200</line>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x5a22aa8 is 8 bytes inside a block of size 64 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2918D</ip>
+      <obj>/usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+      <dir>/builddir/build/BUILD/valgrind-3.11.0/coregrind/m_replacemalloc</dir>
+      <file>vg_replace_malloc.c</file>
+      <line>576</line>
+    </frame>
+    <frame>
+      <ip>0x449FC9</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::new_allocator&lt;IntElement&gt;::deallocate(IntElement*, unsigned long)</fn>
+      <dir>/usr/include/c++/4.8.2/ext</dir>
+      <file>new_allocator.h</file>
+      <line>110</line>
+    </frame>
+    <frame>
+      <ip>0x4407C5</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::_Vector_base&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::_M_deallocate(IntElement*, unsigned long)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>174</line>
+    </frame>
+    <frame>
+      <ip>0x43FF90</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::_Vector_base&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::~_Vector_base()</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>160</line>
+    </frame>
+    <frame>
+      <ip>0x435740</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::~vector()</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>416</line>
+    </frame>
+    <frame>
+      <ip>0x452BB3</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>void std::_Destroy&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_construct.h</file>
+      <line>93</line>
+    </frame>
+    <frame>
+      <ip>0x44F90F</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>void std::_Destroy_aux&lt;false&gt;::__destroy&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_construct.h</file>
+      <line>103</line>
+    </frame>
+    <frame>
+      <ip>0x449BB5</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>void std::_Destroy&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_construct.h</file>
+      <line>126</line>
+    </frame>
+    <frame>
+      <ip>0x4401EA</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>void std::_Destroy&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_construct.h</file>
+      <line>151</line>
+    </frame>
+    <frame>
+      <ip>0x4358A2</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::~vector()</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>415</line>
+    </frame>
+    <frame>
+      <ip>0x457D9C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::~SquareMatrix()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>24</line>
+    </frame>
+    <frame>
+      <ip>0x40F75F</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::Transpose() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>186</line>
+    </frame>
+  </stack>
+  <auxwhat>Block was alloc'd at</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C28203</ip>
+      <obj>/usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator new(unsigned long)</fn>
+      <dir>/builddir/build/BUILD/valgrind-3.11.0/coregrind/m_replacemalloc</dir>
+      <file>vg_replace_malloc.c</file>
+      <line>334</line>
+    </frame>
+    <frame>
+      <ip>0x44F7CF</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>__gnu_cxx::new_allocator&lt;IntElement&gt;::allocate(unsigned long, void const*)</fn>
+      <dir>/usr/include/c++/4.8.2/ext</dir>
+      <file>new_allocator.h</file>
+      <line>104</line>
+    </frame>
+    <frame>
+      <ip>0x449A48</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::_Vector_base&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::_M_allocate(unsigned long)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>168</line>
+    </frame>
+    <frame>
+      <ip>0x449EE0</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::_Vector_base&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::_M_create_storage(unsigned long)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>181</line>
+    </frame>
+    <frame>
+      <ip>0x44069A</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::_Vector_base&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::_Vector_base(unsigned long, std::allocator&lt;IntElement&gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>136</line>
+    </frame>
+    <frame>
+      <ip>0x43633E</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;::vector(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>312</line>
+    </frame>
+    <frame>
+      <ip>0x44FEDB</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>_ZN9__gnu_cxx13new_allocatorISt6vectorI10IntElementSaIS2_EEE9constructIS4_IRKS4_EEEvPT_DpOT0_</fn>
+      <dir>/usr/include/c++/4.8.2/ext</dir>
+      <file>new_allocator.h</file>
+      <line>120</line>
+    </frame>
+    <frame>
+      <ip>0x44A1DB</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>_ZNSt16allocator_traitsISaISt6vectorI10IntElementSaIS1_EEEE12_S_constructIS3_IRKS3_EEENSt9enable_ifIXsrNS5_18__construct_helperIT_IDpT0_EEE5valueEvE4typeERS4_PSB_DpOSC_</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>alloc_traits.h</file>
+      <line>254</line>
+    </frame>
+    <frame>
+      <ip>0x440A7F</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>_ZNSt16allocator_traitsISaISt6vectorI10IntElementSaIS1_EEEE9constructIS3_IRKS3_EEEDTcl12_S_constructfp_fp0_spcl7forwardIT0_Efp1_EEERS4_PT_DpOS9_</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>alloc_traits.h</file>
+      <line>393</line>
+    </frame>
+    <frame>
+      <ip>0x440B13</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>void std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::_M_emplace_back_aux&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>vector.tcc</file>
+      <line>408</line>
+    </frame>
+    <frame>
+      <ip>0x43644C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::push_back(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; const&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>911</line>
+    </frame>
+    <frame>
+      <ip>0x40F2BE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::pushVector(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>156</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x24</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x40FA42</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::toString() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>207</line>
+    </frame>
+    <frame>
+      <ip>0x40F7EF</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::print(std::ostream&amp;) const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>196</line>
+    </frame>
+    <frame>
+      <ip>0x40E54F</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>42</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+    <frame>
+      <ip>0x41F44B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runCurrentTest(std::string&amp;, std::string&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6182</line>
+    </frame>
+    <frame>
+      <ip>0x41DE12</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runTest(Catch::TestCase const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6002</line>
+    </frame>
+    <frame>
+      <ip>0x40558C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::runTests(Catch::Ptr&lt;Catch::Config&gt; const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6350</line>
+    </frame>
+    <frame>
+      <ip>0x420028</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::Session::run()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6458</line>
+    </frame>
+    <frame>
+      <ip>0x41FF29</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::Session::run(int, char const* const*)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6437</line>
+    </frame>
+    <frame>
+      <ip>0x40D825</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>main</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>10393</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x436192</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::size() const</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>645</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x27</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x44F91D</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>void std::_Destroy_aux&lt;false&gt;::__destroy&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_construct.h</file>
+      <line>102</line>
+    </frame>
+    <frame>
+      <ip>0x449BB5</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>void std::_Destroy&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*&gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_construct.h</file>
+      <line>126</line>
+    </frame>
+    <frame>
+      <ip>0x4401EA</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>void std::_Destroy&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;(std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;*, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt;&amp;)</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_construct.h</file>
+      <line>151</line>
+    </frame>
+    <frame>
+      <ip>0x4358A2</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::~vector()</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>415</line>
+    </frame>
+    <frame>
+      <ip>0x457D9C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>SquareMatrix::~SquareMatrix()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.h</file>
+      <line>24</line>
+    </frame>
+    <frame>
+      <ip>0x40E55E</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>____C_A_T_C_H____T_E_S_T____2()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>SquareMatrix.cpp</file>
+      <line>28</line>
+    </frame>
+    <frame>
+      <ip>0x4206E7</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::FreeFunctionTestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6631</line>
+    </frame>
+    <frame>
+      <ip>0x407DCE</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::TestCase::invoke() const</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>7568</line>
+    </frame>
+    <frame>
+      <ip>0x41F78C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::invokeActiveTestCase()</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6211</line>
+    </frame>
+    <frame>
+      <ip>0x41F44B</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runCurrentTest(std::string&amp;, std::string&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6182</line>
+    </frame>
+    <frame>
+      <ip>0x41DE12</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::RunContext::runTest(Catch::TestCase const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6002</line>
+    </frame>
+    <frame>
+      <ip>0x40558C</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>Catch::runTests(Catch::Ptr&lt;Catch::Config&gt; const&amp;)</fn>
+      <dir>/home/jujokio/Documents/ooj-2017-022/vt3</dir>
+      <file>Catch.hpp</file>
+      <line>6350</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x436192</ip>
+      <obj>/home/jujokio/Documents/ooj-2017-022/vt3/bin/Debug/vt3</obj>
+      <fn>std::vector&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt;, std::allocator&lt;std::vector&lt;IntElement, std::allocator&lt;IntElement&gt; &gt; &gt; &gt;::size() const</fn>
+      <dir>/usr/include/c++/4.8.2/bits</dir>
+      <file>stl_vector.h</file>
+      <line>645</line>
+    </frame>
+  </stack>
+</error>
+
+
+<status>
+  <state>FINISHED</state>
+  <time>00:00:00:01.168 </time>
+</status>
+
+<errorcounts>
+  <pair>
+    <count>3</count>
+    <unique>0x27</unique>
+  </pair>
+  <pair>
+    <count>3</count>
+    <unique>0x24</unique>
+  </pair>
+  <pair>
+    <count>3</count>
+    <unique>0x7</unique>
+  </pair>
+  <pair>
+    <count>8</count>
+    <unique>0x11</unique>
+  </pair>
+  <pair>
+    <count>2</count>
+    <unique>0x10</unique>
+  </pair>
+  <pair>
+    <count>2</count>
+    <unique>0xf</unique>
+  </pair>
+  <pair>
+    <count>2</count>
+    <unique>0xe</unique>
+  </pair>
+  <pair>
+    <count>2</count>
+    <unique>0xd</unique>
+  </pair>
+  <pair>
+    <count>2</count>
+    <unique>0xc</unique>
+  </pair>
+  <pair>
+    <count>2</count>
+    <unique>0xb</unique>
+  </pair>
+  <pair>
+    <count>2</count>
+    <unique>0xa</unique>
+  </pair>
+  <pair>
+    <count>2</count>
+    <unique>0x9</unique>
+  </pair>
+  <pair>
+    <count>2</count>
+    <unique>0x8</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x6</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x5</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x4</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x3</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x2</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x1</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x0</unique>
+  </pair>
+</errorcounts>
+
+<suppcounts>
+</suppcounts>
+
+</valgrindoutput>
+

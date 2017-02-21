@@ -1,0 +1,40 @@
+Jussi Jokio 2433950
+Matriisi on vektori tai taulukko, joka on jaettu riveihin ja 
+sarakkeisiin. Jokaisella rivill‰ on yht‰ monta alkiota ja 
+jokaisella sarakkeella on yht‰ monta alkiota. Matriisi on 
+tyypin mxn -matriisi, jos siin‰ on tasan m kappaletta rivi‰ 
+ja n kappaletta sarakkeita.
+Jokaisella matriisin alkiolla on yksik‰sitteinen paikka 
+matriisissa, joka m‰‰r‰ytyy alkion paikan mukaan. Oletetaan 
+ett‰ on voimassa: 0<i<m ja 0<j<n ja A on mxn-matriisi. voidaan 
+sanoa, ett‰ alkio Aij sijaitsee matriisissa A rivill‰ i ja 
+sarakkeessa j.
+Matriisien laskuoperaatiot eiv‰t eroa juuri normaaleista 
+laskuoperaatioista, pois lukien kertolasku. Matriisin kertominen 
+ja summaaminen luvulla on yksinkertainen prosessi, jossa kaikki 
+matriisin alkiot summataan tai kerrotaan vaaditulla luvulla.
+Kahden saman tyyppisen matriisin summa on kahden paikka-alkion 
+summa. olkoon A ja B mxn-matriiseja. Nyt summa A+B voidaan 
+merkit‰ A+B = C, jossa C on mxn-matriisi. C:n alkioille 
+voidaan merkit‰ Cij = Aij+Bij.
+Kahden matriisin tulo AB voidaan m‰‰ritell‰ ainoastaan, 
+jos ja vain jos matriisi A on mxp-matriisi ja matriisi B 
+on pxn-matriisi. Nyt tulomatriisi C on mxn-matriisi. 
+Tulomatriisi C:n alkio Cij = AiBj, jossa AiBj on A:n i 
+rivin alkoiden tulo B:n j sarakkeen alkioiden kanssa.
+A =  a11, a12	B =  b11, b12		
+     a21, a22        b21, b22
+
+<=>   AB=C = a11*b11+a12*b21,   a11*b12+a12*b22
+             a21*b11+a22*b21,   a21*b12+a22*b22
+
+Matriisien erotus voidaan k‰‰nt‰‰ kahden matriisin summaksi 
+ja jako kahden matriisin tuloksi, joten erotuksen ja 
+jakamisen l‰pik‰ynti‰ ei tarvitse eksplisiittisesti esitt‰‰.
+Matriiseja k‰ytet‰‰n eritt‰in paljon kuvank‰sittelyss‰ ja 
+digitaalisissa kuvan esitt‰misess‰. Kuvan pikseleiden arvot 
+on helppo esitt‰‰ yksik‰sitteisesti matriisin avulla. Lis‰ksi 
+kuvien muokkaaminen on eritt‰in helppoa matriisien eri 
+laskutoimituksien avulla. Matriisien avulla voidaan myˆs laskea 
+yht‰lˆryhmi‰ ja muita matemaattisia ongelmia esimerkiksi 
+tilastotieteess‰.

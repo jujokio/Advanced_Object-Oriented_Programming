@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1485853099 source:/home/jujokio/Documents/ooj-2017-022/et4/HelloGreeter.cpp
+	<string>
+	<iostream>
+	"HelloGreeter.h"
+
+1485852729 /home/jujokio/Documents/ooj-2017-022/et4/HelloGreeter.h
+
+1485853668 source:/home/jujokio/Documents/ooj-2017-022/et4/main.cpp
+	<vector>
+	<iostream>
+	<algorithm>
+	<memory>
+	"HelloGreeter.h"
+

@@ -1,0 +1,36 @@
+        -:    0:Source:SquareMatrix.h
+        -:    0:Programs:2
+        -:    1:#ifndef SQUAREMATRIX_H
+        -:    2:#define SQUAREMATRIX_H
+        -:    3:
+        -:    4:#include "IntElement.h"
+        -:    5:
+        -:    6:
+        -:    7:
+        -:    8:class SquareMatrix
+        -:    9:{
+        -:   10:    public:
+        -:   11:        SquareMatrix();
+        -:   12:        SquareMatrix(IntElement i11, IntElement i12,IntElement i21,IntElement i22);
+        -:   13:        //SquareMatrix();
+    #####:   14:        virtual ~SquareMatrix()=default;
+        -:   15:        //SquareMatrix& operator+=(const SquareMatrix& sq);
+        -:   16:        //SquareMatrix& operator-=(const SquareMatrix& sq);
+        -:   17:        //SquareMatrix& operator*=(const SquareMatrix& sq);
+        -:   18:        SquareMatrix& operator+=(const SquareMatrix &m);
+        -:   19:        SquareMatrix& operator-=(const SquareMatrix &m);
+        -:   20:        SquareMatrix& operator*=(const SquareMatrix &m);
+        -:   21:
+        -:   22:
+        -:   23:    private:
+        -:   24:        IntElement e11;
+        -:   25:        IntElement e12;
+        -:   26:        IntElement e21;
+        -:   27:        IntElement e22;
+        -:   28:};
+        -:   29:
+        -:   30:
+        -:   31:
+        -:   32:
+        -:   33:
+        -:   34:#endif // SQUAREMATRIX_H

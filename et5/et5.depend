@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1486457901 source:/home/so/jujokio/Documents/ooj-2017-022/et5/HelloGreeter.cpp
+	<string>
+	<iostream>
+	"HelloGreeter.h"
+
+1486458217 /home/so/jujokio/Documents/ooj-2017-022/et5/HelloGreeter.h
+	"Greeter.h"
+
+1486457901 source:/home/so/jujokio/Documents/ooj-2017-022/et5/MoroGreeter.cpp
+	<string>
+	<iostream>
+	"MoroGreeter.h"
+
+1486458738 /home/so/jujokio/Documents/ooj-2017-022/et5/MoroGreeter.h
+	"Greeter.h"
+
+1486460348 source:/home/so/jujokio/Documents/ooj-2017-022/et5/main.cpp
+	<vector>
+	<iostream>
+	<algorithm>
+	<memory>
+	<random>
+	<chrono>
+	<boost/algorithm/string.hpp>
+	"Greeter.h"
+	"HelloGreeter.h"
+	"MoroGreeter.h"
+
+1486458486 source:/home/so/jujokio/Documents/ooj-2017-022/et5/Greeter.cpp
+	<iostream>
+	<string>
+	"Greeter.h"
+
+1486458486 /home/so/jujokio/Documents/ooj-2017-022/et5/Greeter.h
+

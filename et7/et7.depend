@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1487328128 source:/home/jujokio/Documents/ooj-2017-022/et7/Greeter.cpp
+	<iostream>
+	<string>
+	"Greeter.h"
+
+1487632891 /home/jujokio/Documents/ooj-2017-022/et7/Greeter.h
+	<functional>
+	<memory>
+
+1487328111 source:/home/jujokio/Documents/ooj-2017-022/et7/main.cpp
+	<vector>
+	<iostream>
+	<algorithm>
+	<memory>
+	<random>
+	<chrono>
+	<boost/algorithm/string.hpp>
+	<functional>
+	<map>
+	"Greeter.h"
+

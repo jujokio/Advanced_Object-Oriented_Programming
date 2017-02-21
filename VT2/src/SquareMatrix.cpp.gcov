@@ -1,0 +1,25 @@
+        -:    0:Source:SquareMatrix.cpp
+        -:    0:Programs:2
+        -:    1:#define CATCH_CONFIG_MAIN
+        -:    2:#include "../Catch.hpp"
+        -:    3:#include "SquareMatrix.h"
+        -:    4:#include "IntElement.h"
+        -:    5:
+    #####:    6:SquareMatrix::SquareMatrix():SquareMatrix(IntElement(0),IntElement(0),IntElement(0),IntElement(0))
+        -:    7:{
+        -:    8:    //ctor
+    #####:    9:}
+        -:   10:
+    #####:   11:SquareMatrix::SquareMatrix(IntElement i11, IntElement i12,IntElement i21,IntElement i22)
+        -:   12:{
+    #####:   13:    IntElement e11=i11;
+    #####:   14:    IntElement e12=i12;
+    #####:   15:    IntElement e21=i21;
+    #####:   16:    IntElement e22=i22;
+        3:   17:}
+        -:   18:
+        -:   19:
+        -:   20:
+        -:   21://SquareMatrix::operator+=(const SquareMatrix &s1, const SquareMatrix){
+        -:   22://}
+        -:   23:

@@ -1,0 +1,22 @@
+var NAVTREEINDEX0 =
+{
+"annotated.html":[0,0],
+"classes.html":[0,1],
+"classhello_greeter.html":[0,0,0],
+"classhello_greeter.html#a73c2829a5b16c159ea96852021bcdf5c":[0,0,0,1],
+"classhello_greeter.html#a989270f3bcdee3aa115957dd91821080":[0,0,0,0],
+"classmoro_greeter.html":[0,0,1],
+"classmoro_greeter.html#a8cc320fc88a52d00704a4cda5ade1c4a":[0,0,1,0],
+"classmoro_greeter.html#adf48d3d6e01538ce4c8e85b8ed044f17":[0,0,1,1],
+"files.html":[1,0],
+"hello_greeter_8cpp.html":[1,0,0],
+"hello_greeter_8h.html":[1,0,1],
+"hello_greeter_8h_source.html":[1,0,1],
+"index.html":[],
+"main_8cpp.html":[1,0,2],
+"main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[1,0,2,0],
+"moro_greeter_8cpp.html":[1,0,3],
+"moro_greeter_8h.html":[1,0,4],
+"moro_greeter_8h_source.html":[1,0,4],
+"pages.html":[]
+};
